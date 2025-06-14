@@ -14,47 +14,46 @@ st.set_page_config(
 # Style CSS
 st.markdown("""
 <style>
-/* ... (cały Twój kod CSS pozostaje bez zmian) ... */
  html, body {
-    height: 100%; /* Ustawienie wysokości na 100% dla html i body */
-    margin: 0; /* Usunięcie domyślnego marginesu */
+    height: 100%; 
+    margin: 0; 
   }
   [data-testid="stAppViewContainer"] {
-    position: relative; /* Pozycjonowanie relatywne dla kontenera głównego aplikacji */
-    height: 100vh; /* Wysokość kontenera na 100% wysokości widocznego obszaru */
-    background-image: url("https://wallpapercave.com/wp/wp2563942.jpg"); /* Ustawienie obrazu tła */
-    background-size: cover; /* Pokrycie całego tła obrazem */
-    background-position: center center; /* Wyśrodkowanie obrazu tła */
-    background-attachment: fixed; /* Tło pozostaje nieruchome podczas przewijania */
-    overflow: auto; /* ZMIANA: Umożliwia przewijanie, gdy treść jest dłuższa */
+    position: relative; 
+    height: 100vh; 
+    background-image: url("https://wallpapercave.com/wp/wp2563942.jpg"); 
+    background-size: cover; 
+    background-position: center center; 
+    background-attachment: fixed; 
+    overflow: auto; 
   }
   [data-testid="stAppViewContainer"]::before {
-    content: ""; /* Tworzenie pseudoelementu do nałożenia warstwy na tło */
-    position: absolute; /* Pozycjonowanie absolutne względem rodzica */
-    top:0; left:0; right:0; bottom:0; /* Rozciągnięcie na cały obszar rodzica */
-    background: rgba(0,0,0,0.4); /* Półprzezroczyste czarne tło */
-    backdrop-filter: blur(3px); /* Rozmycie tła za elementem */
-    -webkit-backdrop-filter: blur(3px); /* Wersja dla przeglądarek WebKit */
-    z-index: 0; /* Ustawienie niskiego z-index, aby inne elementy były nad nim */
+    content: ""; 
+    position: absolute; 
+    top:0; left:0; right:0; bottom:0; 
+    background: rgba(0,0,0,0.4); 
+    backdrop-filter: blur(3px); 
+    -webkit-backdrop-filter: blur(3px); 
+    z-index: 0; 
   }
   [data-testid="stAppViewContainer"] > .main {
-    position: relative; /* Pozycjonowanie relatywne dla głównej zawartości aplikacji */
-    z-index: 1; /* Ustawienie wyższego z-index, aby główna zawartość była nad tłem */
-    background: transparent; /* Przezroczyste tło dla głównej zawartości */
+    position: relative; 
+    z-index: 1; 
+    background: transparent; 
   }
 [data-testid="stHeader"] {
-    background-color: rgba(0,0,0,0); /* Przezroczyste tło dla nagłówka Streamlit */
+    background-color: rgba(0,0,0,0); 
 }
 [data-testid="stToolbar"] {
-    right: 2rem; /* Przesunięcie paska narzędzi Streamlit w prawo */
+    right: 2rem; 
 }
 div.st-emotion-cache-16txtl3 {
-    background-color: rgba(28, 30, 38, 0.8); /* Półprzezroczyste ciemne tło dla specyficznego komponentu */
-    padding: 1rem; /* Wewnętrzny odstęp */
-    border-radius: 0.5rem; /* Zaokrąglenie rogów */
+    background-color: rgba(28, 30, 38, 0.8); 
+    padding: 1rem; 
+    border-radius: 0.5rem; 
 }
 .st-emotion-cache-1avcm0n {
-    background-color: rgba(15, 17, 22, 0.9); /* Półprzezroczyste bardzo ciemne tło dla innego komponentu */
+    background-color: rgba(15, 17, 22, 0.9); 
 }
 </style>
 """, unsafe_allow_html=True)  # Pozwolenie na renderowanie HTML w Streamlit
